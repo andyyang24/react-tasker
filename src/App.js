@@ -5,7 +5,10 @@ import { v4 as uuidv4 } from "uuid";
 const LOCAL_STORAGE_KEY = "taskApp.tasks";
 
 function App() {
-  const [tasks, setTasks] = useState([]);
+  const [tasks, setTasks] = useState([
+    { id: uuidv4(), name: "Morning Meeting", complete: true },
+    { id: uuidv4(), name: "Team Chatting", complete: false },
+  ]);
 
   const taskNameRef = useRef();
 
